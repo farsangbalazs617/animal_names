@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +19,12 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/books', function () {
-    return view('books');
-});
+Route::get('/books', [BookController::class, 'index']);
 
-Route::get('/contact', function () {
+Route::get('/contact', [ContactController::class, 'index']);
+
+Route::get('/contact/create', function () {
     return view('contact');
 });
+
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');

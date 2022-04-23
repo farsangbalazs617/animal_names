@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="col-md-12 px-0">
-                <p class="lead my-3">He is perhaps best known for his youth novel Tüskevár ("Thorn Castle", 1957), about two city boys' summer holiday at the corner of Lake Balaton and Zala River, their experiences, adventures, contact with Nature in its genuine form. They are helped by an old man on their gradual journey into manhood. This novel was awarded the Attila József Prize in 1960, was made into a film in 1967 (see its IMDb entry) and was voted to be the 8th most liked novel of Hungary in the Big Read in 2005. Its sequel was Téli berek ("Winter Grove", 1959).</p>
+                <p class="lead my-3"></p>
             </div>
         </div>
 
