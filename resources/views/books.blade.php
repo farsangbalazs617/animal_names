@@ -37,15 +37,51 @@
                                 <li class="list-group-item bg-light">{{$animal->aname}} - {{$animal->species}}</li>
                             @endforeach
                         </ul>
+                        <hr class="my-2">
+                        <form action="{{route('animal.store')}}" method="POST">
+                            @csrf
+                            <div class="mb-3">
+                                <h4>Add new animal to the novel</h4>
+                            </div>
+                            <input type="hidden" name="novelID" value="{{$novel->id}}">
+                            <div class="mb-3">
+                                <label for="animalName" class="form-label">Animal Name</label>
+                                <input type="text" class="form-control" id="animalName" name="animalName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="animalSpecies" class="form-label">Species</label>
+                                <input type="text" class="form-control" id="animalSpecies" name="animalSpecies" required>
+                            </div>
+                            <button type="submit" class="btn btn-success">Save</button>
+                        </form>
                     </div>
                 </div>
                 @else
                     <div class="card-footer bg-light">
                         <p>
-                        <button type="button" class="btn btn-outline-dark rounded-0" disabled>
-                            No animal data
-                        </button>
-                    </p>
+                            <button type="button" class="btn btn-outline-success rounded-0" data-bs-toggle="collapse" href="#collapse{{$novel->id}}" role="button" aria-expanded="false" aria-controls="collapse{{$novel->id}}">
+                                Add new animal
+                            </button>
+                            <div class="collapse" id="collapse{{$novel->id}}">
+                            <hr class="my-2">
+                            <form action="{{route('animal.store')}}" method="POST">
+                                @csrf
+                                <div class="mb-3">
+                                    <h4>Add new animal to the novel</h4>
+                                </div>
+                                <input type="hidden" name="novelID" value="{{$novel->id}}">
+                                <div class="mb-3">
+                                    <label for="animalName" class="form-label">Animal Name</label>
+                                    <input type="text" class="form-control" id="animalName" name="animalName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="animalSpecies" class="form-label">Species</label>
+                                    <input type="text" class="form-control" id="animalSpecies" name="animalSpecies" required>
+                                </div>
+                                <button type="submit" class="btn btn-success">Save</button>
+                            </form>
+                        </div>
+                        </p>
                     </div>
                 @endif
             </div>

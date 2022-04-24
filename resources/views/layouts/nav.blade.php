@@ -7,19 +7,19 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{url('')}}">Home</a>
+          <a class="nav-link @if(Request::url() === url('')) active  @endif" aria-current="page" href="{{url('')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('books')}}">Novels</a>
+          <a class="nav-link @if(Request::url() === url('books')) active  @endif" href="{{url('books')}}">Novels</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('contact')}}">Messages</a>
+          <a class="nav-link @if(Request::url() === url('contact')) active  @endif" href="{{url('contact')}}">Messages</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('contact/create')}}">Contact us</a>
+          <a class="nav-link @if(Request::url() === url('contact/create')) active  @endif" href="{{url('contact/create')}}">Contact us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('gallery')}}">Gallery</a>
+          <a class="nav-link @if(Request::url() === url('gallery')) active  @endif" href="{{url('gallery')}}">Gallery</a>
         </li>
       </ul>
     </div>
