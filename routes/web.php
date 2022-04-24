@@ -23,6 +23,7 @@ Route::get('/', function () {
 Route::get('/books', [BookController::class, 'index']);
 
 Route::get('/contact', [ContactController::class, 'index']);
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 Route::get('/contact/create', function () {
     return view('contact');
@@ -30,5 +31,4 @@ Route::get('/contact/create', function () {
 
 Route::get('/gallery', [GalleryController::class, 'index']);
 Route::post('/gallery', [GalleryController::class, 'store'])->name('gallery.store');
-
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/gallery/delete', [GalleryController::class, 'delete'])->name('gallery.delete');
