@@ -16,7 +16,7 @@
 
             <div class="col-12">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Jhon Doe" required="">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Jhon Doe" required>
                 <div class="invalid-feedback">
                     Please enter your name.
                 </div>
@@ -24,7 +24,7 @@
 
             <div class="col-12">
               <label for="title" class="form-label">Title</label>
-              <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+              <input type="text" class="form-control" name="title" id="title" placeholder="Title" required>
               <div class="invalid-feedback">
                 Please enter a title.
               </div>
@@ -32,7 +32,7 @@
 
             <div class="col-12">
               <label for="message" class="form-label">Message</label>
-              <textarea type="text" name="message" class="form-control" id="message"></textarea>
+              <textarea type="text" name="message" class="form-control" id="message" required></textarea>
               <div class="invalid-feedback">
                 Please enter a message.
               </div>

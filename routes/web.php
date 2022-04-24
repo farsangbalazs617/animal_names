@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,5 +27,8 @@ Route::get('/contact', [ContactController::class, 'index']);
 Route::get('/contact/create', function () {
     return view('contact');
 });
+
+Route::get('/gallery', [GalleryController::class, 'index']);
+Route::post('/gallery', [GalleryController::class, 'store'])->name('gallery.store');
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
