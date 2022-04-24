@@ -8,11 +8,11 @@
             @csrf
           <div class="row g-3">
 
-            @isset ($status)
+            @if ($errors->any())
                 <div class="alert alert-success" role="alert">
                     Message sent success!
                 </div>
-            @endisset
+            @endif
 
             <div class="col-12">
                 <label for="name" class="form-label">Name</label>

@@ -9,15 +9,28 @@
                 <a class="btn btn-success my-2" href="{{url('contact/create')}}">Please create one</a>
             </div>
         @endif
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <table class="table my-4">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Title</th>
+                <th scope="col">Message</th>
+                <th scope="col">Created</th>
+            </tr>
+        </thead>
+        <tbody>
             @foreach ($contacts as $contact)
-                <div class="feature col">
-                    <h2>{{$contact->title}}</h2>
-                    <p class="fw-light text-muted fst-italic">{{$contact->name}}</p>
-                    <p>{{$contact->message}}</p>
-                </div>
+                <tr>
+                    <th scope="row">{{$contact->id}}</th>
+                    <td>{{$contact->name}}</td>
+                    <td>{{$contact->title}}</td>
+                    <td>{{$contact->message}}</td>
+                    <td>{{$contact->created_at}}</td>
+                </tr>
             @endforeach
-        </div>
+        </tbody>
+        </table>
     </div>
 
 @endsection

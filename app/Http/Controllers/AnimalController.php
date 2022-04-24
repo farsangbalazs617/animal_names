@@ -11,9 +11,14 @@ class AnimalController extends Controller
     {
         $novel = Novel::find($request->novelID);
 
+        $validated = $request->validate([
+            'animalName' => 'required|max:255',
+            'animalSpecies' => 'required',
+        ]);
+
         $novel->animals()->create([
-            'aname' => $request->animalName,
-            'species' => $request->animalSpecies,
+            'aname' => $validated['animalName'],
+            'species' => $validated['animalSpecies'],
         ]);
 
         return back();

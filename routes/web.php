@@ -29,7 +29,7 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 
 Route::get('/contact/create', function () {
     return view('contact');
-});
+})->name('contact.create');
 
 Route::post('/animal/create', [AnimalController::class, 'store'])->name('animal.store');
 
